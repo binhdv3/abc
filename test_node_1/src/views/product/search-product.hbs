@@ -1,0 +1,25 @@
+<div class="container">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Image</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each product_search}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td><img src="{{this.image}}" alt=""></td>
+                <td>{{this.price}}</td>
+                <td>
+                    <a href="" data-toggle="modal" data-id="{{this._id}}"
+                            data-target="#delete_product_modal">Delete</a>
+                    <a href="/product/edit/{{this._id}}">Edit</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
